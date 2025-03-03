@@ -72,6 +72,24 @@ extension ComAtprotoLexicon.Repository {
             case swapRecord
             case swapCommit
         }
+        
+        public init(
+           repository: String,
+           collection: String,
+           recordKey: String,
+           shouldValidate: Bool? = true,
+           record: UnknownType,
+           swapRecord: String? = nil,
+           swapCommit: String? = nil
+       ) {
+           self.repository = repository
+           self.collection = collection
+           self.recordKey = recordKey
+           self.shouldValidate = shouldValidate
+           self.record = record
+           self.swapRecord = swapRecord
+           self.swapCommit = swapCommit
+       }
     }
 
     /// A output model for creating a record that replaces a previous record.
