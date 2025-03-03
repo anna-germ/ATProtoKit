@@ -17,7 +17,7 @@ extension ComAtprotoLexicon.Repository {
     /// - SeeAlso: This is based on the [`com.atproto.repo.putRecord`][github] lexicon.
     ///
     /// [github]: https://github.com/bluesky-social/atproto/blob/main/lexicons/com/atproto/repo/putRecord.json
-    public struct PutRecordRequestBody: Sendable, Codable {
+    public struct PutRecordRequestBody: Sendable {
 
         /// The decentralized identifier (DID) or handle of the repository.
         ///
@@ -125,3 +125,8 @@ extension ComAtprotoLexicon.Repository {
         }
     }
 }
+
+// Defining the Codable conformance in an extension allows the memberwise
+// initializer to be generated automatically
+// https://stackoverflow.com/questions/48155118/explit-conformance-to-codable-removes-memberwise-initializer-generation-on-struc
+extension ComAtprotoLexicon.Repository.PutRecordRequestBody: Codable {}
