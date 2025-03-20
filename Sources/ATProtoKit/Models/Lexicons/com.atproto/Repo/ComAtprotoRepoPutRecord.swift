@@ -73,7 +73,7 @@ extension ComAtprotoLexicon.Repository {
             case swapCommit
         }
         
-        init(repository: String, collection: String, recordKey: String, shouldValidate: Bool? = nil, record: UnknownType, swapRecord: String? = nil, swapCommit: String? = nil) {
+        public init(repository: String, collection: String, recordKey: String, shouldValidate: Bool? = nil, record: UnknownType, swapRecord: String? = nil, swapCommit: String? = nil) {
             self.repository = repository
             self.collection = collection
             self.recordKey = recordKey
