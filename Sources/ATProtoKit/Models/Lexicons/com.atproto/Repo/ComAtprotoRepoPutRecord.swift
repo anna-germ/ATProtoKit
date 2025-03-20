@@ -126,7 +126,4 @@ extension ComAtprotoLexicon.Repository {
     }
 }
 
-// Defining the Codable conformance in an extension allows the memberwise
-// initializer to be generated automatically
-// https://stackoverflow.com/questions/48155118/explit-conformance-to-codable-removes-memberwise-initializer-generation-on-struc
 extension ComAtprotoLexicon.Repository.PutRecordRequestBody: Codable {}

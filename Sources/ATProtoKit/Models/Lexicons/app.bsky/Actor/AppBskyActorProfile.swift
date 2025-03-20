@@ -74,8 +74,6 @@ extension AppBskyLexicon.Actor {
     }
 }
 
-// Implementing Codable conformance in an extension allows Swift to automatically
-// synthesize the memberwise initializer
 extension AppBskyLexicon.Actor.ProfileRecord: Codable {
 
     public init(from decoder: any Decoder) throws {
